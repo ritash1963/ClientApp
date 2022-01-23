@@ -1,0 +1,14 @@
+<!--<p *ngFor="let item of barChartData">{{item.data}}</p>--> 
+<h3># of employees  </h3>
+<div class="container" *ngIf="org3num&&org2num&&org1num">
+<div style="display: block;">
+  <canvas baseChart 
+  [datasets]="barChartData"
+  [labels]="barChartLabels"
+  [options]="barChartOptions"
+  [plugins]="barChartPlugins"
+  [legend]="barChartLegend"
+  [type]="barChartType">
+</canvas>
+</div>
+</div>
