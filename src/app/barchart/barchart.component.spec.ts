@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { BarchartComponent } from './barchart.component';
+import { OrgService } from '../_services/org.service';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('BarchartComponent', () => {
   let component: BarchartComponent;
@@ -8,7 +10,10 @@ describe('BarchartComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BarchartComponent ]
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+      declarations: [BarchartComponent],
+      providers: [OrgService],
+      imports: [HttpClientModule]
     })
     .compileComponents();
   });
