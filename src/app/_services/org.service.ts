@@ -14,19 +14,25 @@ export class OrgService {
 
   // https://localhost:5001/api/org
    getOrgData1(sOrg1: string) {
-
     const content_ = JSON.stringify(sOrg1); 
-    // console.log(content_);
-    const httpOptions_ = {
+    //adding 'Authorization': '1234' for unit test only 
+    // const httpOptions_ = {
+    // headers: new HttpHeaders({ 'Content-Type': 'application/json' , 'Authorization': '1234' })
+    // };
+      const httpOptions_ = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
+   
     return this.http.post<OrgDataVM[]>(this.baseUrl + 'org', content_, httpOptions_);
    } 
- 
+
    // https://localhost:5001/api/org
    getOrgData2(sOrg2: string) {
     const content_ = JSON.stringify(sOrg2); 
-    // console.log(content_);
+    //adding 'Authorization': '1234' for unit test only 
+    // const httpOptions_ = {
+    // headers: new HttpHeaders({ 'Content-Type': 'application/json' , 'Authorization': '1234' })
+    // };
     const httpOptions_ = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
@@ -36,7 +42,10 @@ export class OrgService {
    // https://localhost:5001/api/org
    getOrgData3(sOrg3: string) {
     const content_ = JSON.stringify(sOrg3); 
-    // console.log(content_);
+    //adding 'Authorization': '1234' for unit test only 
+    // const httpOptions_ = {
+    // headers: new HttpHeaders({ 'Content-Type': 'application/json' , 'Authorization': '1234' })
+    // };
     const httpOptions_ = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
